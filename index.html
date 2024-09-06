@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="文字列の並べ替え全通り出力">
+    <title>アナグラムメーカー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+    <div class="container">
+        <h2>アナグラムメーカー</h2>
+        <input type="text" v-model="inputString" @keyup.enter="generatePermutations" placeholder="文字を入力してください">
+        <button @click="generatePermutations">並べ替えを生成</button>
+        <div id="result">
+            <p v-if="permutations.length">並べ替え件数: {{ permutations.length }}</p>
+            <ul v-if="permutations.length">
+                <li v-for="(perm, index) in permutations" :key="index">{{ perm }}</li>
+            </ul>
+            <p v-else>並べ替え結果がここに表示されます。</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="script.js"></script>
+</body>
+</html>

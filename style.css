@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  padding: 20px; /* ページ全体に余白 */
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* containerの最大幅を設定 */
+  margin: 0 auto; /* 横方向の中央配置 */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* ボックスのサイズ計算を調整 */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#result {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 5px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 奇数番目のハイライト */
+li:nth-child(odd) {
+  background-color: #f9f9f9; /* 奇数番目の背景色 */
+  color: #333; /* 奇数番目の文字色 */
+}
+
+/* 偶数番目のハイライト */
+li:nth-child(even) {
+  background-color: #333; /* 偶数番目の背景色 */
+  color: #fff; /* 偶数番目の文字色 */
+}
